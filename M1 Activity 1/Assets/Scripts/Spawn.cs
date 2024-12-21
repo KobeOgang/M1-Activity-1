@@ -63,7 +63,7 @@ public class Spawn : MonoBehaviour
 
     public void RestartGame()
     {
-        Time.timeScale = 1f; // Reset time scale in case the game was paused
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

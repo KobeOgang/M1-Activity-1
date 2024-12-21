@@ -12,11 +12,10 @@ public class ThirdPersonCamera : MonoBehaviour
     private float pitch = 0f;
     private float yaw = 0f;
 
-    private bool isCursorLocked = true; // Tracks cursor lock state
+    private bool isCursorLocked = true; 
 
     void Start()
     {
-        // Set initial cursor state
         SetCursorState(true);
 
         Vector3 angles = transform.eulerAngles;
@@ -26,14 +25,12 @@ public class ThirdPersonCamera : MonoBehaviour
 
     void Update()
     {
-        // Toggle cursor lock state on "Esc"
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isCursorLocked = !isCursorLocked;
             SetCursorState(isCursorLocked);
         }
 
-        // Only allow camera rotation when the cursor is locked
         if (isCursorLocked)
         {
             yaw += Input.GetAxis("Mouse X") * sensitivity;
@@ -54,7 +51,6 @@ public class ThirdPersonCamera : MonoBehaviour
         }
     }
 
-    // Method to set cursor state (locked or unlocked)
     void SetCursorState(bool isLocked)
     {
         if (isLocked)
@@ -69,7 +65,6 @@ public class ThirdPersonCamera : MonoBehaviour
         }
     }
 
-    // Method to get camera's forward direction
     public Vector3 GetCameraForward()
     {
         Vector3 forward = transform.forward;

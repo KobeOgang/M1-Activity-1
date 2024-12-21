@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-    public GameObject playerPrefab; // Your player prefab
-    public Transform[] spawnPoints; // Your spawn points
-    private GameObject currentPlayer; // Reference to the current player instance
+    public GameObject playerPrefab;
+    public Transform[] spawnPoints; 
+    private GameObject currentPlayer; 
 
     void Start()
     {
-        // Ensure currentPlayer is initialized when the game starts
         
     }
 
